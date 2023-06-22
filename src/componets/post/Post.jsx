@@ -3,10 +3,6 @@ import React from "react";
 export const Post = () => {
   return (
     <>
-      {/* <div className="flex mt-2">
-    <div className="pl-9 ">Green Feed</div>
-    <div className="pl-2">challenges</div>
-  </div> */}
       <div className="bg-white m-4 mt-2 p-1 my-4 rounded-[19px] text-black-500 ">
         <div className="flex flex-column pl-2">
           <div className="mt-2">

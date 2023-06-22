@@ -1,9 +1,11 @@
 import "./App.css";
-
+import { Post } from "./componets/post/Post";
 function App() {
   return (
     <>
-      <p className="text-red-500">test</p>
+      <p className="">
+       <Post/>
+      </p>
     </>
   );
 }

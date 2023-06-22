@@ -6,6 +6,7 @@ import Protected from "./componets/protected/Protected";
 import Login from "./views/Login";
 import Register from "./views/Register";
 import Navbar from "./componets/navbar/Navbar";
+import Footer from "./componets/footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signup" element={<Register />} />
         </Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

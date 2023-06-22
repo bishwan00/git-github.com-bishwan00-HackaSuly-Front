@@ -9,7 +9,7 @@ const Login = () => {
     console.log(`Email: ${email}, Password: ${password}`);
   };
   return (
-    <div className="flex-col flex items-center">
+    <div className="flex-col flex items-center ">
       <div className="shadow-sm w-[90%]  mt-10 rounded-md  flex flex-col items-center justify-center bg-gray-50 py-12 px-4 ">
         <div className="max-w-md w-full space-y-8">
           <div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Post = () => {
+const Post = () => {
   return (
     <>
       <div className="bg-white m-4 mt-2 p-1 my-4 rounded-[19px] text-black-500 ">
@@ -44,3 +44,4 @@ export const Post = () => {
     </>
   );
 };
+export default Post;

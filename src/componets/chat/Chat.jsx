@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { db } from "../firebase-config";
+import { db } from "../../firebase-config";
 import SendMessage from "./SendMessage";
 import {
   collection,
@@ -8,6 +8,7 @@ import {
   orderBy,
   onSnapshot,
 } from "firebase/firestore";
+import Container from "../container/Container";
 
 function Chat() {
   const [messages, setMessages] = useState([]);
@@ -62,35 +63,37 @@ function Chat() {
   }, [messages]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen rounded-lg">
-      <h1 className=" text-lg font-bold ">Community Chat</h1>
-      <div
-        className="max-w-lg w-full bg-white rounded shadow flex-grow overflow-y-scroll"
-        ref={chatMessagesRef}
-      >
-        <div className="p-4" ref={chatMessagesRef}>
-          {messages.map((message) => (
-            <div key={message.id}>
-              <img
-                src={"../../Public/vite.svg"}
-                alt="User Avatar"
-                className="w-8 h-8 rounded-full mr-2"
-              />
+    <Container>
+      <div className="flex flex-col items-center justify-center h-screen rounded-lg">
+        <h1 className=" text-lg font-bold ">Community Chat</h1>
+        <div
+          className="max-w-lg w-full bg-white rounded shadow flex-grow overflow-y-scroll"
+          ref={chatMessagesRef}
+        >
+          <div className="p-4" ref={chatMessagesRef}>
+            {messages.map((message) => (
+              <div key={message.id}>
+                <img
+                  src={"../../Public/vite.svg"}
+                  alt="User Avatar"
+                  className="w-8 h-8 rounded-full mr-2"
+                />
 
-              <div className=" whitespace-nowrap  w-min items-center border-gray-300 border shadow-md rounded-3xl rounded-tl-none py-2 px-6 m-2">
-                <div>
-                  <p className="">{message.text}</p>
-                  <span className="text-xs text-gray-500">
-                    {formatDate(message.createdAt)}
-                  </span>
+                <div className=" whitespace-nowrap  w-min items-center border-gray-300 border shadow-md rounded-3xl rounded-tl-none py-2 px-6 m-2">
+                  <div>
+                    <p className="">{message.text}</p>
+                    <span className="text-xs text-gray-500">
+                      {formatDate(message.createdAt)}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        <SendMessage />
       </div>
-      <SendMessage />
-    </div>
+    </Container>
   );
 }
 

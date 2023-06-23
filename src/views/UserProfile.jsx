@@ -1,17 +1,14 @@
 import React from "react";
-import proImg from "../../public/assets/photo-1633332755192-727a05c4013d.jpeg";
-import Post from "../componets/post/Post";
+import proImg from "../../public/assets/propic.jpeg";
+import Post from "../components/post/Post";
 import { Tabs } from "antd";
-import ProfileImage from "../componets/profile/ProfileImage";
-import UserProfileContent from "../componets/profile/UserProfileContent";
-import Container from "../componets/container/Container";
+import ProfileImage from "../components/profile/ProfileImage";
+import UserProfileContent from "../components/profile/UserProfileContent";
+import Container from "../components/container/Container";
 import "../index.css";
-import ProfileAdminRequest from "../componets/profile/ProfileAdminRequest";
-import ProfileAdminChallenge from "../componets/profile/ProfileAdminChallenge";
+import ProfileAdminRequest from "../components/profile/ProfileAdminRequest";
+import ProfileAdminChallenge from "../components/profile/ProfileAdminChallenge";
 const UserProfile = () => {
-  const onChange = (key) => {
-    console.log(key);
-  };
   const items = [
     {
       key: "1",
@@ -32,7 +29,6 @@ const UserProfile = () => {
           defaultActiveKey="1"
           className="text-gray-500"
           items={items}
-          onChange={onChange}
           activeTabClassName="custom-active-tab"
         />
       </Container>

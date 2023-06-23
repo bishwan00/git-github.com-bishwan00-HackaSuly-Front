@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
-const Post = () => {
+const Post = ({ adminPage }) => {
   const [seeMore, setSeeMore] = useState(true);
+  const { user } = useSelector((state) => state.user);
 
   return (
     <>
@@ -62,17 +64,21 @@ const Post = () => {
           </p>
         </div>
       </div>
-      <div
-        className="flex z-[-1] relative justify-center w-full "
-        style={{ top: "-10px" }}
-      >
-        <div className="py-6 bg-agreen-500 rounded-bl-2xl text-center w-[50%] text-white">
-          Approve
+      {user?.role === "admin" && adminPage ? (
+        <div
+          className="flex z-[-1] relative justify-center w-full "
+          style={{ top: "-10px" }}
+        >
+          <div className="py-6 bg-agreen-500 rounded-bl-2xl text-center w-[50%] text-white">
+            Approve
+          </div>
+          <div className="py-6 bg-red-500 w-[50%] rounded-br-2xl text-center text-white">
+            Decline
+          </div>
         </div>
-        <div className="py-6 bg-red-500 w-[50%] rounded-br-2xl text-center text-white">
-          Decline
-        </div>
-      </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };

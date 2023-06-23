@@ -4,10 +4,10 @@ import Post from "../post/Post";
 const ProfileAdminRequest = () => {
   return (
     <div>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post adminPage={true} />
+      <Post adminPage={true} />
+      <Post adminPage={true} />
+      <Post adminPage={true} />
     </div>
   );
 };

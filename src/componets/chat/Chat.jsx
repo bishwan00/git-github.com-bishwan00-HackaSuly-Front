@@ -145,7 +145,7 @@ function Chat() {
                   <p className=" flex-wrap">{message.text}</p>
                   <span className="text-xs text-gray-500">
                     {formatDate(message.createdAt)}
-                    <p>Is Admin: {isAdmin ? "Yes" : "No"}</p>
+                    {/* <p>Is Admin: {isAdmin ? "Yes" : "No"}</p> */}
                   </span>
                 </div>
                 {/* Edit and delete buttons */}

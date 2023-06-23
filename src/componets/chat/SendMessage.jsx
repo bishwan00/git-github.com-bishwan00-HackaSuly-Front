@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { db } from "../../firebase-config";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import SendIcon from "@mui/icons-material/Send";
 
 function SendMessage({ onSendMessage }) {
   const [msg, setMsg] = useState("");
@@ -13,7 +14,7 @@ function SendMessage({ onSendMessage }) {
       console.log("Message contains blocked words");
 
       await addDoc(messagesRef, {
-        text: "the user tried to use bad words please avoid these words otherwise you will be blocked ",
+        text: "<WARNING>this user tried to use bad words, please avoid these words otherwise you will be blocked ",
         createdAt: serverTimestamp(),
       });
 
@@ -64,10 +65,10 @@ function SendMessage({ onSendMessage }) {
         onKeyUp={handleKeyUp}
       />
       <button
-        className="ml-2 px-4 py-2 font-semibold text-white bg-blue-500 rounded-md focus:outline-none hover:bg-blue-600"
+        className="ml-4 px-4 py-2 font-semibold text-white bg-blue-500 rounded-md focus:outline-none hover:bg-blue-600"
         onClick={sendMsg}
       >
-        Send
+        <SendIcon />
       </button>{" "}
     </div>
   );

@@ -10,6 +10,7 @@ import Footer from "./componets/footer/Footer";
 import Stats from "./views/Stats";
 import Chat from "./componets/chat/Chat";
 import Container from "./componets/container/Container";
+import Payment from "./views/Payment";
 function App() {
   return (
     <div className="min-h-[100%]">
@@ -25,6 +26,7 @@ function App() {
           <Route path="/stats" element={<Stats />} />
 
           <Route path="/message" element={<Chat />} />
+          <Route path="/payment" element={<Payment />} />
         </Route>
       </Routes>
       <Footer />

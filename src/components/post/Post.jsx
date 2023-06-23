@@ -3,13 +3,13 @@ import React from "react";
 const Post = () => {
   return (
     <>
-      <div className="bg-white m-4 mt-2 p-1 my-4 rounded-[19px] text-black-500 ">
+      <div className="bg-white  mt-2 p-1 my-4 rounded-[19px] text-black-500 ">
         <div className="flex flex-column pl-2">
-          <div className="mt-2">
+          <div className="mt-2 w-7 h-7">
             <img
               src="../../public/assets/test.png"
               alt=""
-              className="w-7 h-7 rounded-[10px]"
+              className="propic rounded-[10px]"
             />
           </div>
           <div className="mt-2">
@@ -22,7 +22,7 @@ const Post = () => {
             <img
               src="../../public/assets/test.png"
               alt=""
-              className="w-[99%] h-[194px]  rounded-l-xl"
+              className="w-[99%] h-[194px] object-cover  rounded-l-xl"
             />
           </div>
           <div className="pr-2">
@@ -30,7 +30,7 @@ const Post = () => {
             <img
               src="../../public/assets/test.png"
               alt=""
-              className="w-[99%] h-[194px] rounded-r-xl  "
+              className="w-[99%] h-[194px] object-cover rounded-r-xl  "
             />
           </div>
         </div>

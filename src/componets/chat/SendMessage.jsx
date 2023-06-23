@@ -10,6 +10,12 @@ function SendMessage({ onSendMessage }) {
   const blockedWords = ["gbx ", "gub", "kure sa", "nafrate"];
 
   const sendMsg = async () => {
+    if (msg.trim() === "") {
+      // Display an error message or take appropriate action
+      console.log("Cannot send empty message");
+      return;
+    }
+
     if (hasBlockedWords(msg)) {
       console.log("Message contains blocked words");
 

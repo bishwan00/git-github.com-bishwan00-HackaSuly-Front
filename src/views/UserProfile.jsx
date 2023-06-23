@@ -9,9 +9,6 @@ import "../index.css";
 import ProfileAdminRequest from "../components/profile/ProfileAdminRequest";
 import ProfileAdminChallenge from "../components/profile/ProfileAdminChallenge";
 const UserProfile = () => {
-  const onChange = (key) => {
-    console.log(key);
-  };
   const items = [
     {
       key: "1",
@@ -32,7 +29,6 @@ const UserProfile = () => {
           defaultActiveKey="1"
           className="text-gray-500"
           items={items}
-          onChange={onChange}
           activeTabClassName="custom-active-tab"
         />
       </Container>

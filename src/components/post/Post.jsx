@@ -27,7 +27,7 @@ const Post = ({ adminPage }) => {
               <img
                 src="../../public/assets/test.png"
                 alt=""
-                className="w-[99%] h-[194px]  rounded-l-xl"
+                className="w-[99%] h-[194px] object-cover rounded-l-xl"
               />
             </div>
             <div className="pr-2">
@@ -35,7 +35,7 @@ const Post = ({ adminPage }) => {
               <img
                 src="../../public/assets/test.png"
                 alt=""
-                className="w-[99%] h-[194px] rounded-r-xl  "
+                className="w-[99%] h-[194px] object-cover rounded-r-xl  "
               />
             </div>
           </div>

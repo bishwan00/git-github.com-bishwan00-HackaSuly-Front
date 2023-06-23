@@ -13,10 +13,11 @@ const CreatePost = () => {
       <div className=" px-3 flex gap-2 flex-col w-full">
         <input type="text" placeholder="Share With Us" />
         <div>
-          <AddPhotoAlternateIcon style={{ fontSize: 30 ,color:"#555555" }} />
+            <AddPhotoAlternateIcon style={{ fontSize: 30, color: "#555555" }} />
+        
         </div>
       </div>
-      <div className='mr-2'>
+      <div className="mr-2">
         <SendRoundedIcon style={{ fontSize: 35, color: "#2ECC71" }} />{" "}
       </div>
     </div>

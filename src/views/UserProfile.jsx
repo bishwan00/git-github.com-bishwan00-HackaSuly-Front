@@ -1,9 +1,9 @@
 import React from "react";
 import proImg from "../../public/assets/propic.jpeg";
 import Post from "../components/post/Post";
-import { Tabs } from "antd";
 import ProfileImage from "../components/profile/ProfileImage";
 import UserProfileContent from "../components/profile/UserProfileContent";
+import { Tabs } from "antd";
 import Container from "../components/container/Container";
 import "../index.css";
 import ProfileAdminRequest from "../components/profile/ProfileAdminRequest";

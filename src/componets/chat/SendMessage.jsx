@@ -8,7 +8,8 @@ function SendMessage({ onSendMessage }) {
   const messagesRef = collection(db, "messages");
   const inputRef = useRef(null);
   const blockedWords = ["gbx", "gubx", "kure sa", "nafrate", "be adab"]; // ls dahatu functiony firebase bo da anem
-
+ 
+  
   //am code bar prsyara la nardni message
   const sendMsg = async () => {
     if (hasBlockedWords(msg)) {

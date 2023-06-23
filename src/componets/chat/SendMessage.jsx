@@ -7,7 +7,7 @@ function SendMessage({ onSendMessage }) {
   const [msg, setMsg] = useState("");
   const messagesRef = collection(db, "messages");
   const inputRef = useRef(null);
-  const blockedWords = ["gbx", "gubxo", "kure sag", "nafrate"];
+  const blockedWords = ["gbx ", "gub", "kure sa", "nafrate"];
 
   const sendMsg = async () => {
     if (hasBlockedWords(msg)) {

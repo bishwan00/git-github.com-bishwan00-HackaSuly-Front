@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 
   theme: {
+    fontFamily:{
+      infant:['Ysabeau Infant']
+    },
     extend: {
       colors: {
         // Donate Button Background Color = gray-600

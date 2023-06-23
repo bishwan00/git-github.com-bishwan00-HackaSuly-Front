@@ -31,10 +31,10 @@ function SendMessage({ onSendMessage }) {
   };
 
   return (
-    <div className="flex mt-4 p-2 w-full justify-center items-center">
+    <div className="bg-white fixed bottom-12 mt-4 h-20 w-full ">
       <input
         ref={inputRef}
-        className="w-96 justify-center items-center px-4 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-[100%] h-12 border-b-0 justify-center items-center px-4 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         placeholder="Send a Message..."
         type="text"
         value={msg}

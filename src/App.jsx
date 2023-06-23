@@ -7,7 +7,9 @@ import Login from "./views/Login";
 import Register from "./views/Register";
 import Navbar from "./componets/navbar/Navbar";
 import Footer from "./componets/footer/Footer";
-
+import Stats from "./views/Stats";
+import Chat from "./componets/chat/Chat";
+import Container from "./componets/container/Container";
 function App() {
   return (
     <div className="min-h-[100%]">
@@ -20,6 +22,9 @@ function App() {
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
+          <Route path="/stats" element={<Stats />} />
+
+          <Route path="/message" element={<Chat />} />
         </Route>
       </Routes>
       <Footer />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { db } from "../firebase-config";
+import { db } from "../../firebase-config";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 function SendMessage({ onSendMessage }) {
@@ -41,7 +41,6 @@ function SendMessage({ onSendMessage }) {
         onChange={(e) => setMsg(e.target.value)}
         onKeyUp={handleKeyUp}
       />
-    
     </div>
   );
 }

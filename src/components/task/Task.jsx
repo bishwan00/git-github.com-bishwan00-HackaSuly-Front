@@ -6,7 +6,7 @@ const HomePagePost = () => {
   const [seeMore, setSeeMore] = useState(true);
   return (
     <>
-      <div className="bg-white my-4  p-1 rounded-[19px] text-black-500 ">
+      <div className="bg-white my-4 mb-4  p-1 rounded-[19px] text-black-500 ">
         <div className="flex flex-column pl-2 items-center justify-start w-full">
           <div className="mt-2 pl-4">
             <StarIcon

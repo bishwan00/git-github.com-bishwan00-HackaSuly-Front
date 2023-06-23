@@ -1,5 +1,5 @@
 import React from "react";
-
+import Task from "../task/Task";
 const ProfileAdminChallenge = () => {
   return (
     <>
@@ -37,6 +37,8 @@ const ProfileAdminChallenge = () => {
           </div>
         </div>
       </div>
+
+      <Task />
     </>
   );
 };

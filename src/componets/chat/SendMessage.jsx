@@ -7,7 +7,8 @@ function SendMessage({ onSendMessage }) {
   const [msg, setMsg] = useState("");
   const messagesRef = collection(db, "messages");
   const inputRef = useRef(null);
-  const blockedWords = ["gbx", "gubx", "kure sa", "nafrate"]; // ls dahatu functiony firebase bo da anem
+  const blockedWords = ["gbx", "gub", "kure sa", "nafrate", "be adab"]; // ls dahatu functiony firebase bo da anem
+
   //am code bar prsyara la nardni message
   const sendMsg = async () => {
     if (hasBlockedWords(msg)) {
@@ -55,7 +56,7 @@ function SendMessage({ onSendMessage }) {
   };
 
   return (
-    <div className="pl-4 bg-white fixed bottom-12 mt-4 h-20 w-full ">
+    <div className="pl-4   bg-white fixed bottom-12 mt-4 h-20 w-full ">
       <input
         ref={inputRef}
         className="w-[70%] lg:w-[91%] h-12 border-b-0 border-r-0 justify-center items-center px-4 pl-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"

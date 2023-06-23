@@ -1,8 +1,6 @@
 import React from "react";
 import proImg from "../../public/assets/propic.jpeg";
 import Post from "../components/post/Post";
-import proImg from "../../public/assets/photo-1633332755192-727a05c4013d.jpeg";
-import Post from "../components/post/Post";
 import { Tabs } from "antd";
 import ProfileImage from "../components/profile/ProfileImage";
 import UserProfileContent from "../components/profile/UserProfileContent";

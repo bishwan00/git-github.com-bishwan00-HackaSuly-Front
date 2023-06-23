@@ -8,7 +8,7 @@ import Register from "./views/Register";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Stats from "./views/Stats";
-
+import UserProfile from "./views/UserProfile";
 import { useGetCurrentUserQuery } from "./api/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./api/globalSlices/user.slics";
@@ -35,6 +35,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="/profile" element={<UserProfile />} />
+
           <Route path="/message" element={<Chat />} />
         </Route>
       </Routes>

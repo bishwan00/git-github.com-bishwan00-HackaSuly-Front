@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useLoginMutation } from "../api/auth";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,7 +26,14 @@ const Login = () => {
       dispatch(getUser(data?.user));
     }
   }, [data]);
-  if (user) return <Navigate to="/" replace />;
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user]);
 
   return (
     <div className="flex-col flex items-center ">

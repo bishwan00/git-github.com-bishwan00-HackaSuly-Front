@@ -3,7 +3,6 @@ import Container from "../components/container/Container";
 import Slider from "../components/slider/Slider";
 import SuperHero from "../components/superHeros/SuperHero";
 import proImg from "../../public/assets/propic.jpeg";
-import proImg from "../../public/assets/photo-1633332755192-727a05c4013d.jpeg";
 const Stats = () => {
   return (
     <Container>

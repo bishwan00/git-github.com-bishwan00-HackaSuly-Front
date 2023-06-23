@@ -69,8 +69,6 @@ function Chat() {
     }
   }, [messages]);
 
-  return (
-    <div className="flex w-full mb-28 flex-col items-center justify-center h-screen rounded-lg">
   useEffect(() => {
     const storedEmail = localStorage.getItem("email");
     setEmail(storedEmail);
@@ -142,13 +140,6 @@ function Chat() {
                 className="w-8 h-8 rounded-full mr-2"
               />
 
-              <div className=" whitespace-nowrap  w-min items-center border-gray-300 border shadow-md rounded-3xl rounded-tl-none py-2 px-6 m-2">
-                <div>
-                  <p className="">{message.text}</p>
-                  <span className="text-xs text-gray-500">
-                    {formatDate(message.createdAt)}
-                  </span>
-                </div>
               <div className="w-auto whitespace-wrap   items-center border-gray-300 border shadow-md rounded-3xl rounded-tl-none py-2 px-6 m-2">
                 <div>
                   <p className=" flex-wrap">{message.text}</p>

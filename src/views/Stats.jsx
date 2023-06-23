@@ -8,7 +8,7 @@ const Stats = () => {
     <Container>
       <Slider />
       <Statistic />
-      <h1 className="text-center text-xl text-gray-500 font-bold">
+      <h1 className="text-center  text-gray-500 ">
         Last Month Superheros
       </h1>
       <SuperHero name="Bishwan Sherko" image={proImg} price={100} />

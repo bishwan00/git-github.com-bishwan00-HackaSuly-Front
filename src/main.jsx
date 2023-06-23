@@ -10,7 +10,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <App />
+        <div className=" text-ablack-700 bg-abg-200 font-infant">
+          <App />
+        </div>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

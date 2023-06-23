@@ -1,15 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./views/Home";
-import ScrollToTop from "./componets/scroll/ScrollToUp";
-import NotAuthorized from "./componets/protected/NotAuthorized";
-import Protected from "./componets/protected/Protected";
+import ScrollToTop from "./components/scroll/ScrollToUp";
+import NotAuthorized from "./components/protected/NotAuthorized";
+import Protected from "./components/protected/Protected";
 import Login from "./views/Login";
 import Register from "./views/Register";
-import Navbar from "./componets/navbar/Navbar";
-import Footer from "./componets/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 import Stats from "./views/Stats";
-import Chat from "./componets/chat/Chat";
-import Container from "./componets/container/Container";
+import Chat from "./components/chat/Chat";
+import Container from "./components/container/Container";
 function App() {
   return (
     <div className="min-h-[100%]">

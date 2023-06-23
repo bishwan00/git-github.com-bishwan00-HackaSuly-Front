@@ -4,6 +4,8 @@ import Home from "./views/Home";
 import ScrollToTop from "./componets/scroll/ScrollToUp";
 import NotAuthorized from "./componets/protected/NotAuthorized";
 import Protected from "./componets/protected/Protected";
+import Login from "./views/Login";
+import Register from "./views/Register";
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
       <Routes>
         <Route element={<Protected />}>
           <Route path="/">
-            <Route index element={<Home />} />
+            <Route index element={<Register />} />
           </Route>
         </Route>
       </Routes>

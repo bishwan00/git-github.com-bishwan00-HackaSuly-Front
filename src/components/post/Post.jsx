@@ -7,7 +7,7 @@ const Post = ({ adminPage }) => {
 
   return (
     <>
-      <div className="bg-white  mt-4 p-1  rounded-[19px] text-black-500 ">
+      <div className="bg-white  mt-4 p-1 mb-4  rounded-[19px] text-black-500 ">
         <div>
           <div className="flex flex-column pl-2">
             <div className="mt-2">

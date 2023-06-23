@@ -8,6 +8,7 @@ import Register from "./views/Register";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Stats from "./views/Stats";
+import Payment from "./views/Payment";
 import UserProfile from "./views/UserProfile";
 import { useGetCurrentUserQuery } from "./api/auth";
 import { useDispatch, useSelector } from "react-redux";
@@ -38,6 +39,7 @@ function App() {
           <Route path="/profile" element={<UserProfile />} />
 
           <Route path="/message" element={<Chat />} />
+          <Route path="/payment" element={<Payment />} />
         </Route>
       </Routes>
       <Footer />

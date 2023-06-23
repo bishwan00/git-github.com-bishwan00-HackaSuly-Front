@@ -3,7 +3,6 @@ import Post from "../components/post/Post"
 
 
 const Home = () => {
-
   return (
     <div className="mx-6">
 

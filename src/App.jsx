@@ -1,3 +1,4 @@
+
 import { Route, Routes } from "react-router-dom";
 import Home from "./views/Home";
 import ScrollToTop from "./componets/scroll/ScrollToUp";
@@ -21,5 +22,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

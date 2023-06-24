@@ -9,7 +9,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const [login, { data, isError }] = useLoginMutation();
+  const [login, { data, isError, isSuccess }] = useLoginMutation();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
 
@@ -21,9 +21,12 @@ const Login = () => {
     try {
       const response = await login(formData);
       dispatch(getUser(response?.data?.user));
-      if (data) navigate("/");
     } catch (error) {}
   };
+
+  useEffect(() => {
+    if (isSuccess) navigate("/");
+  }, [isSuccess]);
   useEffect(() => {
     if (!isError && data) {
       localStorage.setItem("access_token", data?.token);

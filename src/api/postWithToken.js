@@ -27,6 +27,7 @@ export const postWithTokensApi = api.injectEndpoints({
         method: "POST",
         body: body,
       }),
+      invalidatesTags: ["Post"],
     }),
     updatePost: builder.mutation({
       query: (body) => {
@@ -35,10 +36,10 @@ export const postWithTokensApi = api.injectEndpoints({
           method: "PATCH",
           body: {
             ...body,
-            id: undefined,
           },
         };
       },
+      invalidatesTags: ["Post", "Task"],
     }),
   }),
 });

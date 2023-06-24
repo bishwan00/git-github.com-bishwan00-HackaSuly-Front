@@ -27,6 +27,7 @@ export const taskWithTokensApi = api.injectEndpoints({
         method: "POST",
         body: body,
       }),
+      invalidatesTags: ["Task"],
     }),
     updateTask: builder.mutation({
       query: (body) => {
@@ -39,6 +40,7 @@ export const taskWithTokensApi = api.injectEndpoints({
           },
         };
       },
+      invalidatesTags: ["Task"],
     }),
   }),
 });

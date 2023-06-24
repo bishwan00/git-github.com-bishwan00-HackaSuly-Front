@@ -17,19 +17,19 @@ const Slider = () => (
     <div>
       <img
         className={`${contentStyle} rounded-xl h-72 w-full object-cover`}
-        src="../../../public/assets/greenn.jpg"
+        src="/assets/greenn.jpg"
       />
     </div>
     <div>
       <img
         className={`${contentStyle} rounded-xl h-72 w-full object-cover`}
-        src="../../../public/assets/green.jpg"
+        src="/assets/green.jpg"
       />
     </div>
     <div>
       <img
         className={`${contentStyle} rounded-xl h-72 w-full object-cover`}
-        src="../../../public/assets/nawroz.jpg"
+        src="/assets/nawroz.jpg"
       />
     </div>
   </Carousel>

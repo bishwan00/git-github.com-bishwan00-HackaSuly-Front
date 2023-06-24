@@ -1,8 +1,8 @@
 import React from "react";
-import Tree from "../../public/assets/payment-tree.png";
+import Tree from "assets/payment-tree.png";
 import { useState } from "react";
 
-import FibQR from "../../public/assets/FIB.jpeg";
+import FibQR from "/assets/FIB.jpeg";
 
 const Payment = () => {
   const [qunatitiy, setQuantity] = useState(1);

@@ -7,14 +7,19 @@ import {
   useCreatePostMutation,
   useUploadsMutation,
 } from "../../api/postWithToken";
+import { useGetAllTasksQuery } from "../../api/task";
+import { useSelector } from "react-redux";
 
 const CreatePost = () => {
   const [createPost, { post: response }] = useCreatePostMutation();
   const [uploads, { data: uploadsResponse }] = useUploadsMutation();
+  const { data: task } = useGetAllTasksQuery({ iscompleted: false });
+  const { user } = useSelector((state) => state.user);
 
   const [formData, setFormData] = useState({
     description: "",
-
+    taskId: "",
+    userId: user?._id,
     images: [],
   });
   const handleInput = (e) => {
@@ -25,7 +30,7 @@ const CreatePost = () => {
     createPost(formData);
     setFormData({
       description: "",
-
+      taskId: "",
       images: [],
     });
   };
@@ -64,8 +69,25 @@ const CreatePost = () => {
           value={formData.description}
           placeholder="Share With Us"
         />
+
         <div>
           <AddPhotoAlternateIcon style={{ fontSize: 30, color: "#555555" }} />
+          <select
+            name="taskId"
+            onChange={handleInput}
+            className="bg-transparent relative border-b-2 w-24 right-0  rounded-sm outline-none text-daisy-bush-900 placeholder:text-daisy-bush-900 "
+          >
+            <option className="bg-transparent" value="">
+              My Task
+            </option>
+            {task?.data.map((e) => {
+              return (
+                <option className="bg-transparent" value={e._id}>
+                  {e.location}
+                </option>
+              );
+            })}
+          </select>
           <input
             type="file"
             onChange={handleFileChange}

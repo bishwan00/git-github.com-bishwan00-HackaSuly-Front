@@ -21,6 +21,7 @@ const ProfileImage = ({ image }) => {
           alt="img"
         />
       </div>
+      <div className="mt-2 font-bold">{user?.point}</div>
       <div className="mt-[10px]">
         <p>
           {user?.firstName} {user?.LastName}

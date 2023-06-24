@@ -71,7 +71,7 @@ const HomePagePost = ({ task, isAdminPro }) => {
                   seeMore ? "h-[60px]" : ""
                 }`}
               >
-                {e.discription}
+                {e.description}
               </p>
             </div>
             <p

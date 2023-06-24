@@ -1,15 +1,12 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
-// Define a service using a base URL and expected endpoints
-export const taskApi = createApi({
-  reducerPath: "taskApi",
-  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
+import { api } from "./api";
+export const taskApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getAllTasks: builder.query({
       query: (condition) => {
         const filter = createFilterQueryString(condition);
         return `/tasks${filter}`;
       },
+      providesTags: ["Task"],
     }),
   }),
 });

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLoginMutation } from "../api/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
+import { getUser } from "../api/globalSlices/user.slics";
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -15,25 +16,26 @@ const Login = () => {
   const handleInput = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    login(formData);
+    try {
+      const response = await login(formData);
+      dispatch(getUser(response?.data?.user));
+      if (data) navigate("/");
+    } catch (error) {}
   };
   useEffect(() => {
     if (!isError && data) {
       localStorage.setItem("access_token", data?.token);
-      dispatch(getUser(data?.user));
     }
   }, [data]);
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user?.role) {
+  //   }
+  // }, [user]);
 
   return (
     <div className="flex-col flex items-center ">

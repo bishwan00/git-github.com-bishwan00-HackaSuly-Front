@@ -59,7 +59,11 @@ const CreatePost = () => {
   return (
     <div className=" bg-white w-full flex h-[106px] items-center px-3 my-4 rounded-[19px]">
       <div>
-        <img src={proImg} alt="profile pic" className="w-24 rounded-2xl " />
+        <img
+          src={`http://localhost:4000/uploads/${user?.image}`}
+          alt="profile pic"
+          className="w-24 rounded-2xl "
+        />
       </div>
       <div className=" px-3 flex gap-2 flex-col w-full">
         <input

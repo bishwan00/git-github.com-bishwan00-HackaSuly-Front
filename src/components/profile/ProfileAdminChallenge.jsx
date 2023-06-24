@@ -4,7 +4,7 @@ import {
   useCreateTaskMutation,
   useUploadsTaskMutation,
 } from "../../api/taskWithToken";
-const ProfileAdminChallenge = () => {
+const ProfileAdminChallenge = ({ task }) => {
   const [createTask, { post: response }] = useCreateTaskMutation();
   const [uploads, { data: uploadsResponse }] = useUploadsTaskMutation();
 
@@ -105,7 +105,7 @@ const ProfileAdminChallenge = () => {
         </div>
       </div>
 
-      <Task />
+      <Task task={task} isAdminPro={true} />
     </>
   );
 };

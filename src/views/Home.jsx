@@ -5,10 +5,12 @@ import { Tabs } from "antd";
 import Container from "../components/container/Container";
 import { useSelector } from "react-redux";
 import { useGetAllPostsQuery } from "../api/post";
+import { useGetAllTasksQuery } from "../api/task";
 
 const Home = () => {
   const { user } = useSelector((state) => state.user);
   const { data } = useGetAllPostsQuery({ isActive: true });
+  const { data: task } = useGetAllTasksQuery({ iscompleted: false });
 
   const items = [
     {
@@ -19,7 +21,7 @@ const Home = () => {
     {
       key: "2",
       label: `Challenge`,
-      children: <Task />,
+      children: <Task task={task} />,
     },
   ];
   return (

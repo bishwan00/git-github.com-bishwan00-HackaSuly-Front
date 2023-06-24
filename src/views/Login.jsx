@@ -21,7 +21,7 @@ const Login = () => {
     try {
       const response = await login(formData);
       dispatch(getUser(response?.data?.user));
-      navigate("/");
+      if (data) navigate("/");
     } catch (error) {}
   };
   useEffect(() => {

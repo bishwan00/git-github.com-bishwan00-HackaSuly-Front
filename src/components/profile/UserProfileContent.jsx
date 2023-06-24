@@ -1,9 +1,9 @@
-const UserProfileContent = () => {
+const UserProfileContent = ({ user }) => {
   return (
     <div className="mt-[28px] flex flex-col rounded-xl bg-white p-6 mx-6 ">
       <div className="flex gap-4 items-end border-b pb-4">
         <div className="text-2xl font-bold text-yellow-400 text-center w-20 pb-2">
-          75
+          {user?.point}
         </div>
         <div className="text-md text-gray-500 font-bold self-center">
           Points

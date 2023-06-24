@@ -9,8 +9,10 @@ import "../index.css";
 import ProfileAdminRequest from "../components/profile/ProfileAdminRequest";
 import ProfileAdminChallenge from "../components/profile/ProfileAdminChallenge";
 import { useSelector } from "react-redux";
+import { useGetAllTasksQuery } from "../api/task";
 const UserProfile = () => {
   const { user } = useSelector((state) => state.user);
+  const { data: task } = useGetAllTasksQuery({ iscompleted: false });
 
   const items = [
     {
@@ -21,7 +23,7 @@ const UserProfile = () => {
     {
       key: "2",
       label: `Challenge`,
-      children: <ProfileAdminChallenge />,
+      children: <ProfileAdminChallenge task={task} />,
     },
   ];
   return (
@@ -37,7 +39,7 @@ const UserProfile = () => {
           />
         </Container>
       ) : (
-        <UserProfileContent />
+        <UserProfileContent user={user} />
       )}
       <div className="my-[82px]">{/* <Post /> */}</div>
     </>

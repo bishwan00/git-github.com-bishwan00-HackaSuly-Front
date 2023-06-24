@@ -18,7 +18,10 @@ const Navbar = () => {
         <img src={Logo} className="w-[71px] h-[71px]" />
       </div>
       <div className="mt-[69px] bg-gray-500 p-2 pl-4 rounded-l-3xl">
-        <span className="text-md text-white  ">Donate</span>
+        <Link to="/payment">
+          {" "}
+          <span className="text-md text-white  ">Donate</span>
+        </Link>
         <FavoriteIcon
           style={{ fontSize: 25 }}
           className="text-green-500 ml-2"

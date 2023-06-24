@@ -15,7 +15,7 @@ const Statistic = () => {
       </div>{" "}
       <div className="flex gap-x-2 px-3 py-6  border-b justify-center items-center">
         <div className="text-2xl font-bold  w-20 text-agreen-500 ">3</div>
-        <div className="text-md   ">Live Now </div>{" "}
+        <div className="text-md   ">Live Challenges </div>{" "}
         <span className="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
       </div>
     </div>

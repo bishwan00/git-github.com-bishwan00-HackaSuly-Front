@@ -5,6 +5,7 @@ import { postApi } from "./api/post";
 import { postWithTokensApi } from "./api/postWithToken";
 import { taskWithTokensApi } from "./api/taskWithToken";
 import { taskApi } from "./api/task";
+import { userApi } from "./api/user";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     [postWithTokensApi.reducerPath]: postWithTokensApi.reducer,
     [taskApi.reducerPath]: taskApi.reducer,
     [taskWithTokensApi.reducerPath]: taskWithTokensApi.reducer,
+    [userApi.reducerPath]: userApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
@@ -21,6 +23,7 @@ export const store = configureStore({
       postApi.middleware,
       postWithTokensApi.middleware,
       taskApi.middleware,
-      taskWithTokensApi.middleware
+      taskWithTokensApi.middleware,
+      userApi.middleware
     ),
 });

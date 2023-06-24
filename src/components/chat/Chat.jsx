@@ -133,9 +133,7 @@ function Chat() {
           {messages.map((message) => (
             <div key={message.id}>
               <img
-                src={
-                  "../../public/assets/photo-1633332755192-727a05c4013d.jpeg"
-                }
+                src={"../../public/assets/propic.jpeg"}
                 alt="User Avatar"
                 className="w-8 h-8 rounded-full mr-2"
               />

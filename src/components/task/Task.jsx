@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import CancelIcon from "@mui/icons-material/Cancel";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+import { useSelector } from "react-redux";
+
 const HomePagePost = () => {
   const [seeMore, setSeeMore] = useState(true);
+  const { user } = useSelector((state) => state.user);
+
   return (
     <>
       <div className="bg-white my-4 mb-4  p-1 rounded-[19px] text-black-500 ">
@@ -19,17 +23,21 @@ const HomePagePost = () => {
               Points: <span className="pl-2 font-[15px]">25</span>
             </p>
           </div>
-          <div className="ml-12 gap-2 flex items-center w-20">
-            <div className="mt-2">
-              <button className="p-2 border flex gap-2 text-agreen-500 border-agreen-500 rounded-lg">
-                Completed
-                <CheckOutlinedIcon style={{ fontSize: 20 }} />
-              </button>
+          {user?.role === "admin" ? (
+            <div className="ml-12 gap-2 flex items-center w-20">
+              <div className="mt-2">
+                <button className="p-2 border flex gap-2 text-agreen-500 border-agreen-500 rounded-lg">
+                  Completed
+                  <CheckOutlinedIcon style={{ fontSize: 20 }} />
+                </button>
+              </div>
+              <div className="mt-2 text-red-500">
+                <CancelIcon style={{ fontSize: 20 }} />
+              </div>
             </div>
-            <div className="mt-2 text-red-500">
-              <CancelIcon style={{ fontSize: 20 }} />
-            </div>
-          </div>
+          ) : (
+            ""
+          )}
         </div>
         <div className="flex flex-row mt-2 ">
           <div className="pl-2  ">

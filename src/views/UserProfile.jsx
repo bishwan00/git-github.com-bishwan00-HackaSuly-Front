@@ -8,7 +8,10 @@ import Container from "../components/container/Container";
 import "../index.css";
 import ProfileAdminRequest from "../components/profile/ProfileAdminRequest";
 import ProfileAdminChallenge from "../components/profile/ProfileAdminChallenge";
+import { useSelector } from "react-redux";
 const UserProfile = () => {
+  const { user } = useSelector((state) => state.user);
+
   const items = [
     {
       key: "1",
@@ -23,16 +26,19 @@ const UserProfile = () => {
   ];
   return (
     <>
-      <ProfileImage image={proImg} />
-      <Container>
-        <Tabs
-          defaultActiveKey="1"
-          className="text-gray-500"
-          items={items}
-          activeTabClassName="custom-active-tab"
-        />
-      </Container>
-      {/* <UserProfileContent /> */}
+      <ProfileImage image={user} />
+      {user?.role === "admin" ? (
+        <Container>
+          <Tabs
+            defaultActiveKey="1"
+            className="text-gray-500"
+            items={items}
+            activeTabClassName="custom-active-tab"
+          />
+        </Container>
+      ) : (
+        <UserProfileContent />
+      )}
       <div className="my-[82px]">{/* <Post /> */}</div>
     </>
   );

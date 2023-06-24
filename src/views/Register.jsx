@@ -116,9 +116,9 @@ function Register() {
                 name="gender"
                 onChange={handleInpute}
                 value={data.gender}
-                className="bg-transparent  border-b-2 w-full md:w-96 rounded-sm outline-none text-daisy-bush-900 placeholder:text-daisy-bush-900 pl-4"
+                className="bg-transparent  border-b-2 w-full  md:w-96 rounded-sm outline-none text-daisy-bush-900 placeholder:text-daisy-bush-900 pl-4"
               >
-                <option className="bg-transparent" value="gender">
+                <option className="bg-transparent " value="gender">
                   Gender
                 </option>
                 <option className="bg-transparent" value="MALE">
